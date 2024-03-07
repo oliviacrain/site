@@ -38,9 +38,9 @@
         {
           default = pkgs.mkShell {
             buildInputs = [ pkgs.bashInteractive ];
-            packages = [
-              pkgs.just
-            ];
+            packages = builtins.attrValues {
+              inherit (pkgs) just zola;
+            };
           };
         }
       );
