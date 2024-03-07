@@ -39,7 +39,7 @@
           default = pkgs.mkShell {
             buildInputs = [ pkgs.bashInteractive ];
             packages = builtins.attrValues {
-              inherit (pkgs) just zola;
+              inherit (pkgs) just zola flyctl;
             };
           };
         }
